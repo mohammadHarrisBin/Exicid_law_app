@@ -8,27 +8,12 @@ import Settingspage from '../pages/settingspage';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Text } from 'react-native';
 import HomeRouter from './HomeRouter';
-
-// const ScreenPage  = new Promise(function(res, rej){
-//   if(res){
-
-  //   function BottomTabs() {
-  //     const Tab = createBottomTabNavigator();
-  //     return (
-  //       <Tab.Navigator>
-  //          <Tab.Screen name="Home" component={Homepage} />
-  //          <Tab.Screen name="Laws" component={Lawpage}/>
-  //          <Tab.Screen name="Favourites" component={Favouritespage}/>
-  //          <Tab.Screen name="Profile" component={ProfilePage}/>
-  //          <Tab.Screen name="Settings" component={Settingspage}/>
-  //       </Tab.Navigator>
-  //   )
-  // };
+import AuthRouter from './AuthRouter';
 
 
 function BottomTabs() {
     const Tab = createBottomTabNavigator();
-
+  
     return (
       <Tab.Navigator      
       screenOptions={({route})=>({
@@ -77,7 +62,7 @@ function BottomTabs() {
          }} name="Home" component={HomeRouter}/>
          <Tab.Screen name="Laws" component={Lawpage}/>
          <Tab.Screen name="Favourites" component={Favouritespage}/>
-         <Tab.Screen name="Profile" component={ProfilePage}/>
+         {/* <Tab.Screen name="Profile" component={AuthRouter}/> */}
          <Tab.Screen name="Settings" component={Settingspage}/>
       </Tab.Navigator>
   )
